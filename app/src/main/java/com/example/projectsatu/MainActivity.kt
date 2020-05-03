@@ -19,8 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setDataSpinnerGender()
         btnSave.setOnClickListener { validasiInput() }
-//        btnSave.setOnClickListener { setDataSpinnerGender() }
+
     }
 
     private fun setDataSpinnerGender(){
@@ -55,6 +56,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToProfilActivity() {
         val intent = Intent(this, ProfilActivity::class.java)
+
+        val bundle = Bundle()
+        bundle.putString("nama", namaInput)
+        bundle.putString("gender", genderInput)
+        bundle.putString("email", emailInput)
+        bundle.putString("telp", telpInput)
+        bundle.putString("alamat", alamatInput)
+
+        intent.putExtras(bundle)
+
         startActivity(intent)
     }
 }
