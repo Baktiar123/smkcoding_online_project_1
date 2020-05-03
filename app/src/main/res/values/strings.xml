@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjectSatu</string>
+    <string name="app_name">BiodataApp</string>
     <string-array name="jenis_kelamin">
         <item>Pilih Kelamin</item>
         <item>Laki-Laki</item>
