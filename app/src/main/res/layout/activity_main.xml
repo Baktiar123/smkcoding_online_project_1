@@ -20,28 +20,35 @@
             android:layout_margin="26dp"
             android:fontFamily="Casual"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#000000"
+            />
 
         <EditText
             android:id="@+id/editName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama"
-            android:layout_margin="16dp" />
+            android:layout_margin="16dp"
+            />
 
         <Spinner
             android:id="@+id/spinnerGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:entries="@array/jenis_kelamin" />
+            android:entries="@array/jenis_kelamin"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"/>
 
         <EditText
             android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-            android:layout_margin="16dp" />
+            android:layout_margin="16dp"
+            />
 
         <EditText
             android:id="@+id/editTelp"
@@ -49,15 +56,21 @@
             android:layout_height="wrap_content"
             android:hint="Telp"
             android:layout_margin="16dp"
-            android:inputType="phone" />
+            android:inputType="phone"
+            />
 
         <EditText
             android:id="@+id/editAddress"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:hint="Alamat"
-            android:layout_margin="16dp"
-            android:inputType="textMultiLine" />
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textMultiLine"
+
+            />
 
         <Button
             android:id="@+id/btnSave"
@@ -66,6 +79,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:text="Simpan"
             android:textColor="@color/colorPrimaryDark" />
 
