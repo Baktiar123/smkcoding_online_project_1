@@ -27,12 +27,14 @@ class ProfilActivity : AppCompatActivity() {
 
         val nama = bundle!!.getString("nama")
         val gender = bundle.getString("gender")
+        val umur = bundle!!.getString("umur")
         val email = bundle.getString("email")
         val telp = bundle.getString("telp")
         val alamat = bundle.getString("alamat")
 
         txtname.text = nama
         jk.text = gender
+        txtUmur.text = umur
         txtEmail.text = email
         txtTelp.text = telp
         txtAddress.text = alamat

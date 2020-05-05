@@ -8,6 +8,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 private var namaInput : String = ""
+private var umurInput : String = ""
 private var emailInput : String = ""
 private var telpInput : String = ""
 private var alamatInput : String = ""
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun validasiInput(){
         namaInput = editName.text.toString()
+        umurInput = editUmur.text.toString()
         emailInput = editEmail.text.toString()
         telpInput = editTelp.text.toString()
         alamatInput = editAddress.text.toString()
@@ -39,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         when{
             namaInput.isEmpty() -> editName.error = "Nama tidak boleh kosong"
             genderInput.equals("Jenis Kelamin harus dipilih", ignoreCase = true) -> tampilToast("Jenis Kelamin harus dipilih")
+            umurInput.isEmpty() -> editUmur.error = "Umur tidak boleh kosong"
             emailInput.isEmpty() -> editEmail.error = "Email tidak boleh kosong"
             telpInput.isEmpty() -> editTelp.error = "Telepon tidak boleh kosong"
             alamatInput.isEmpty() -> editAddress.error = "Alamat tidak boleh kosong"
@@ -60,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putString("nama", namaInput)
         bundle.putString("gender", genderInput)
+        bundle.putString("umur", umurInput)
         bundle.putString("email", emailInput)
         bundle.putString("telp", telpInput)
         bundle.putString("alamat", alamatInput)
