@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 private var namaInput : String = ""
 private var umurInput : String = ""
 private var emailInput : String = ""
