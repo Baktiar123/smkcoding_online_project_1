@@ -19,6 +19,7 @@ class ProfilActivity : AppCompatActivity() {
         ambilData()
         btnEditName.setOnClickListener { navigasiKeEditProfil() }
         btnTelepon.setOnClickListener { dialPhoneNumber(txtTelp.text.toString()) }
+        btnAbout.setOnClickListener { navigasiKeAbout()  }
 
     }
 
@@ -27,7 +28,7 @@ class ProfilActivity : AppCompatActivity() {
 
         val nama = bundle!!.getString("nama")
         val gender = bundle.getString("gender")
-        val umur = bundle!!.getString("umur")
+        val umur = bundle.getString("umur")
         val email = bundle.getString("email")
         val telp = bundle.getString("telp")
         val alamat = bundle.getString("alamat")
@@ -50,6 +51,14 @@ class ProfilActivity : AppCompatActivity() {
         intent.putExtra("nama", namaUser)
         startActivityForResult(intent, REQUEST_CODE)
     }
+
+    private fun navigasiKeAbout() {
+        val intent = Intent(this, AboutActivity::class.java)
+        val namaUser = txtname.text.toString()
+        intent.putExtra("nama", namaUser)
+        startActivityForResult(intent, REQUEST_CODE)
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data:
     Intent?) {
         if (requestCode == REQUEST_CODE){
